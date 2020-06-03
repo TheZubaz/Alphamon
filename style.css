@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+}
+
+body {
+  background-color: #484848;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+header {
+  height: auto;
+}
+
+header > img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: deepskyblue;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+  
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: #fff;
+}
+
+.navigation a:hover {
+  background: #000;
+}
+
+.wrapper {
+  padding: 60px 12% 60px 12%;
+}
+
+.mon-pp {
+  width: 100%;
+  min-height: 180px;
+  max-height: 180px;
+}
+
+.alphamons {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.alphamon {
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
+  background-color: #343434;
+  border-radius: 3%;
+  max-width: 250px;
+}
+
+.alphamon a {
+  text-decoration: none;
+  color: #fff;
+} 
+
+.alphamon a:hover {
+  text-decoration: underline;
+}
+
+.discription {
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+
+.disc-item {
+  color: #fff;
+  border-right: solid 1px #fff;
+  background-color: #343434;
+  padding: 30px;
+  /*
+  max-height: 500px;
+  overflow: hidden;
+  */
+}
+
+.disc-item > p {
+  line-height: 2;
+}
+
+.first {
+  padding: 0;
+}
+
+.last {
+  border: none;
+}
+
+.monPic {
+  height: auto;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.type {
+  width: 45px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.ranking {
+  border-top: solid 1px #fff;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.rank-item {
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  background-color: #343434;
+  padding: 20px 0;
+}
+
+.rank-item > p {
+  text-align: center;
+}
+
+.moves {
+  border-top: solid 1px #fff;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.move-item {
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  background-color: #343434;
+  padding: 20px 0;
+}
+
+.move-item > p {
+  text-align: center;
+}
+
+.move-item  a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.move-item a:hover {
+  text-decoration: underline;
+}
+
+.tableheader {
+  background-color: #00bfff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.move-disc {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.move-discitem > p {
+  text-align: center;
+}
+
+.move-discitem {
+  color: #fff;
+  background-color: #343434;
+  padding: 20px 0;
+}
+
+.movelink  a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.movelink a:hover {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1000px) {
+  .alphamons {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .discription {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .move-disc {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .first {
+    border-bottom: solid 1px #fff;
+  }
+
+  .second {
+    border: none;
+    border-bottom: solid 1px #fff;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  header > img {
+      display: none;
+  }
+
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .alphamons {
+    grid-template-columns: 1fr;
+  }
+
+  .discription {
+    grid-template-columns: 1fr;
+  }
+
+  .move-disc {
+    grid-template-columns: 1fr;
+  }
+
+
+  .disc-item {
+    border: none;
+    border-bottom: solid 1px #fff;
+  }
+
+  .last {
+    border: none;
+  }
+}
